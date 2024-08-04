@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import BaseLayer.BaseClass;
+import UtilsLayer.utilsClass;
 
 public class HomePage extends BaseClass {
 
@@ -27,6 +28,15 @@ public class HomePage extends BaseClass {
 	{
 		PageFactory.initElements(driver, this);
 		
+	}
+	
+	public void HomePageFuctionality()
+	
+	{
+		utilsClass.isDisplayed(ourStory);
+		utilsClass.isDisplayed(ourSolution);
+		utilsClass.isDisplayed(whyTendable);
+		utilsClass.isDisplayed(requestDemoButton);
 	}
 	
 	

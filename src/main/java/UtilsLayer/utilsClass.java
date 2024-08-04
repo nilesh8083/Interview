@@ -21,7 +21,7 @@ public class utilsClass extends BaseClass{
 	
 	public static void click(WebElement wb)
 	{
-		new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(wb)).click();
+		new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(wb)).click();
 	}
 	
 	public static void sendKeys(WebElement wb,String value)
@@ -39,7 +39,7 @@ public class utilsClass extends BaseClass{
 		driver.navigate().refresh();
 	}
 	
-	public boolean  isDisplayed(WebElement wb)
+	public static boolean  isDisplayed(WebElement wb)
 	{
 		if (wb.isDisplayed()&&wb.isEnabled())
 		{

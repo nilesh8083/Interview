@@ -32,16 +32,16 @@ public class BaseClass {
 
 	}
 
-	public static void intializtion(String browserName ) {
-		if (browserName.equalsIgnoreCase("chrome")) {
+	public static void intializtion(String browsername ) {
+		if (browsername.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-		} else if (browserName.equalsIgnoreCase("edge")) {
+		} else if (browsername.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
-		} else if (browserName.equalsIgnoreCase("incognito")) {
+		} else if (browsername.equalsIgnoreCase("incognito")) {
 			ChromeOptions opt = new ChromeOptions();
 			opt.addArguments("--incognito");
 			driver = new ChromeDriver(opt);
-		} else if (browserName.equalsIgnoreCase("headless")) {
+		} else if (browsername.equalsIgnoreCase("headless")) {
 			ChromeOptions opt = new ChromeOptions();
 			opt.addArguments("--headless");
 			driver = new ChromeDriver();
